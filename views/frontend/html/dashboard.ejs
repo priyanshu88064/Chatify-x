@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../javascript/dashboard.js" defer></script>
+
+    <title>Chatify</title>
+</head>
+<body>
+
+    <div class="header"><%= locals.username%></div>
+
+    <div class="box">
+        <a href="/chat">Join Public Room</a>
+    </div>
+
+    <form class="box" method="post" action="/chat/create-room">
+        <input type="text" name="room" required>
+        <button type="submit">Create Room</button> 
+    </form>
+
+
+    <div class="box">
+        <a href="/room">Join Custom Room</a>
+    </div>
+
+    <form class="box" method="get" action="/chat/find">
+        <input type="text" name="username" required>
+        <button type="submit">Send Friend Request</button> 
+    </form>
+
+    <div class="friends box" id="friends">
+        <h4>Friends</h4>
+    </div>
+
+    <div class="requests box" id="requests">
+        <h6>Friend Requests</h6>
+    </div>
+
+    
+    <div class="box">
+        <a href="/logout">Logout</a>
+    </div>
+
+
+</body>
+</html>

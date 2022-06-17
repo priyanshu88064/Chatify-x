@@ -1,0 +1,393 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(to left,#C33764,#1D2671);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.useless{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.panel{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    padding:5px 0 10px 0;
+    background: rgb(119, 119, 215);
+    box-shadow: 5px 5px 10px black;
+}
+
+.request{
+    position: absolute;
+    top: 10px;
+    right:80px;
+    font-size: 20px;
+    color:white;
+    padding: 10px;
+}
+.requestx{
+    position: absolute;
+    top: 10px;
+    right:80px;
+    font-size: 20px;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(211, 209, 228);
+}
+.request > img{
+    width: 30px;
+    
+}
+.requestx > img{
+    width: 30px;
+    
+}
+.myacc{
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    font-size: 20px;
+    color:white;
+    padding:10px;   
+}
+.myaccx{
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    font-size: 20px;
+    color:white;
+
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(211, 209, 228);
+}
+.myacc > img{
+    width: 30px;
+}
+.myaccx > img{
+    width: 30px;
+}
+.logout{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    color:white;
+
+    padding: 10px;
+    border-radius: 10px;
+}
+.logout > img{
+    width: 30px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 50%;
+    width: 700px;
+    height: 80%;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 45px;
+    box-shadow: 10px 10px 30px black;
+
+    transition: opacity 0.3;
+    background-image: linear-gradient(to left,#f9dbd9,#c8ca8f);
+}
+
+.Chat{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.search{
+
+    all: unset;
+    
+    margin-bottom: 10px;
+    max-width: 50%;
+    width: 50%;
+    font-size: 15px;
+    
+    border-bottom: 1px solid black;
+
+}
+.recent{
+    font-size: 25px;
+    margin-top: 25px;
+}
+.chatbox{
+    margin-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: purple; */
+}
+#hover{
+    bottom: 40px;
+    right: 40px;
+    font-size: 20px;
+    position: absolute;
+    background-color: red;
+    color:white;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 25px 29px 25px 29px;
+    z-index: 1;
+
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 10px 10px 30px black;
+}
+.user{
+    user-select: none;
+    display: flex;
+    position: relative;
+
+    margin-top: 15px;
+    margin-right: 7px;
+    padding: 5px;
+    
+    background:#FAF0D7;
+    border-top-left-radius: 30px;
+
+    box-shadow: 1px 1px 3px gray;
+
+    transition: box-shadow 0.2s;
+
+}
+.user:hover{
+    box-shadow: 7px 7px 7px gray;
+    background:#f0e1ba;
+
+}
+
+.user > img{
+    width: 50px;
+    height: 50px;
+    background:darkgrey;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.username{
+    text-transform: capitalize;
+    margin-left: 20px;
+    font-size: 20px;
+    align-self: flex-start;
+}
+.time{
+    opacity: 0.7;
+    margin-left: auto;
+    align-self: center;
+}
+.lastmsg{
+    position: absolute;
+    left: 75px;
+    align-self: flex-end;
+    margin-left: auto;
+    color:green;
+}
+
+#createroom,#joinroom,#addfriend{
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 10px 10px 30px black;
+    transition: bottom 0.4s,top 0.4s,left 0.4s,right 0.4s;
+    width: 160px;
+
+}
+#joinroom{
+    bottom: 40px;
+
+    /* bottom: 130px; */
+    display: none;
+    right: 10px;
+
+}
+#createroom{
+    bottom: 40px;
+
+    /* bottom: 190px; */
+    display: none;
+    right: 10px;
+}
+#addfriend{
+    bottom: 40px;
+    /* bottom: 250px; */
+    display: none    ;
+    right: 10px;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
+.inputFriendsName{
+    display: none;
+    position: absolute;
+    bottom: 200px;
+    right: 20px;
+    z-index: 1;
+    transition:bottom 0.4s ;
+}
+
+.inputFriendsName > form > input{
+    all: unset;
+    background: #f3d6d6;
+    border: 1px solid gray;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px gray , 5px 5px 5px gray inset;
+}
+.inputFriendsName > form > button{
+    all: unset;
+    cursor: pointer;
+    font-size: 15px;
+    /* border:1px solid black; */
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:#8996b3;
+    box-shadow: 5px 5px 5px gray;
+    border: 1px solid black;
+}
+
+#s{
+    position: absolute;
+    background: red;
+    color:white;
+    top: 10px;
+    right: 40px;
+}
+
+#searchImg{
+    cursor: pointer;
+}
+
+.recentBox{
+    display: flex;
+    align-items: flex-end;
+}
+
+.searchBar{
+    margin-left: auto;
+}
+
+.searchBar > img{
+    width: 30px;
+}
+
+.search{
+    transition: width 0.3s;
+}
+
+
+
+@media only screen and (max-width:800px){
+    .panel{
+        font-size: 25px;
+        padding:5px 0 10px 0;
+    }
+    .request{
+        top: 0;
+        right:40px;
+        padding: 7px;
+    }
+    .requestx{
+        top:0;
+        right:40px;
+        padding: 7px;
+    }
+    .request > img{
+        width: 25px;
+        
+    }
+    .requestx > img{
+        width: 25px;
+        
+    }
+    .myacc{
+        top:0;
+        right: 90px;
+        padding:7px;   
+    }
+    .myaccx{
+        top:0;
+        right: 90px;
+        padding: 7px;
+    }
+    .myacc > img{
+        width: 25px;
+    }
+    .myaccx > img{
+        width: 25px;
+    }
+    .logout{
+        top: 0;
+        right: 5px;
+        padding: 7px;
+    }
+    .logout > img{
+        width: 25px;
+    }
+    .box{
+        max-width: none;
+        width: 100%;
+        height: 100%;
+        padding: 10px 5px 0 5px;
+        margin-top: 0;
+        border-radius:0;
+        box-shadow: none;
+    }
+    .Chat{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .recent{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .chatbox{
+        margin-top: 15px;
+        min-height: 500px;
+        height:673px;
+    }
+    body{
+        background-image: linear-gradient(to left,#f9dbd9,#c8ca8f);
+    }
+    /* *{
+        overflow: hidden;
+    } */
+}
+
+/* hide scroll bar for chrome */
+.chatbox::-webkit-scrollbar {
+    display: none;
+  }

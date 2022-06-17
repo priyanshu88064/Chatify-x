@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/maindashboard.css">
+        <link rel="stylesheet" href="../css/chat_page.css">
+    <title>Chatify</title>
+</head>
+<body>
+    
+    <div class="panel">
+        <div class="name">Chatify</div>
+        <a href="/requests" ><div class="request"><img src="../add-friend.png" alt="Friends"></div></a>
+        <a href="/"><div  class="myacc"><img src="../home.png" alt="home"></div></a>
+        <a href="/logout"><div class="logout"><img src="../logout.png" alt="logout"></div></a>
+    </div>
+    
+    <div class="useless">
+        <div class="box" id="box">
+            
+            <div class="head1">
+                <a href="/"><div class="arrow"><img src="../left-arrow.png" alt="back"></div></a>
+                <div class="back">Chats</div>
+                <div class="x_name" id="x_name" style="margin-right:34%;color:darkblue">ID:<%= locals.room%></div>
+                <div class="more"><img src="../more.png" alt="options"></div>
+            </div>
+            <div class="sendarea">
+                <div class="files"><img src="../folder.png" alt="files"></div>
+                <div class="photo"><img src="../gallery.png" alt="photo"></div>
+                <input type="text" id="msg" placeholder="Enter Your Message">
+                <button id="send"><img src="../send-message.png" alt="Send"></button>
+            </div>
+
+            <div class="chatarea" id="chatarea">
+                
+                <!-- <div id="rightMessage">
+                    <div class="userImage"><img src="../1539986471.svg" alt="user"></div>
+                    <div class="content">
+                        <div class="chead">12:00am</div>
+                        <div class="mesg">Fuck You bastard</div>
+                    </div>
+                </div> -->
+                <!-- <div id="leftMessage">
+                    <div class="userImage"><img src="../1539986471.svg" alt="user"></div>
+                    <div class="content">
+                        <div class="crhead">
+                            <span class="crtime">12:00am</span>
+                            <span class="crname">Mashed Potato</span>
+                        </div>
+                        <div class="mesg">Fuck</div>
+                    </div>
+                </div> -->
+
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const room = '<%= locals.room%>';
+    </script>
+    <script src="../javascript/custom-roomR.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+.head1{
+    display: flex;
+    background-color: gray;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 5px 10px 5px 10px;
+}
+
+.arrow > img , .x_photo > img , .more > img{
+    width: 35px;
+    cursor: pointer;
+}
+
+.x_photo>img{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: darkcyan;
+}
+
+.x_photo{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.back{
+    font-size: 20px;
+}
+
+.x_name{
+    font-size: 32px;
+    margin-left: auto;
+    text-transform: capitalize;
+}
+
+.box{
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.chatarea{
+    height: 100%;
+    background-image: linear-gradient(to left , #9796f0,#fbc7d4);
+    display: flex;    
+    flex-direction: column-reverse;
+    padding:20px 10px 50px 10px;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+#rightMessage{
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#rightMessage > .userImage{
+    align-self: flex-start;
+}
+
+#rightMessage > .userImage > img{
+    width: 45px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: lightcoral;
+}
+#rightMessage > .content{
+    background-color: rgb(231, 214, 214);
+    border: 3px solid red;
+    margin-right: 5px;
+    min-width: 250px;
+    max-width: 80%;
+    padding: 2px 5px 5px 5px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: box-shadow .2s;
+}
+
+.chead{
+    margin-top: 1px;
+    margin-bottom: 3px;
+    font-size: 13px;
+    text-align: right;
+    color: darkblue;
+}
+
+#leftMessage{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+#leftMessage > .userImage > img{
+    width: 45px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: lightcoral;
+}
+#leftMessage > .userImage{
+    align-self: flex-start;   
+}
+#leftMessage > .content{
+    border:3px solid green;
+    background: #cde4d0;
+    margin-left: 5px;
+    min-width: 250px;
+    max-width: 60%;
+    padding: 5px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: box-shadow .2s;
+}
+
+.crhead{
+    margin-bottom: 3px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: darkblue;
+}
+.crname{
+    float: right;
+    margin-right: 5px;
+    font-size: 15px;
+}   
+
+#rightMessage > .content:hover , #leftMessage>.content:hover{
+    box-shadow: 7px 7px 10px gray;
+}
+
+.sendarea{
+    background-image: linear-gradient(to left,#58182c,#4a55b4);
+    display: flex;
+    padding: 5px 0 5px 0;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.sendarea > input{
+    all: unset;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: auto;
+}
+
+.files > img,.photo>img{
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#send{
+    all: unset;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#send > img{
+    width: 50px;
+    height: 35px;
+}
+
+@media only screen and (max-width:800px){
+    .head1{
+        border-radius: 0;
+        padding: 10px 10px 5px 10px;
+    }
+    .box{
+        height: 850px;
+    }
+    .chatarea{
+        padding:20px 10px 70px 10px;
+        overflow: scroll;
+    }
+    .panel{
+        display: none;
+    }
+} 
+
+/* hide scroll bar for chrome */
+.chatarea::-webkit-scrollbar {
+    display: none;
+  }

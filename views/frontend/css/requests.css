@@ -1,0 +1,52 @@
+.friends{
+    display: flex;
+    position: relative;
+
+    box-shadow: 50px 5px 5px gray;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.friends > img{
+    width: 50px;
+    height: 50px;
+    background:darkgrey;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.username{
+    text-transform: capitalize;
+    margin-left: 20px;
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+.recieved{
+    position: absolute;
+    left: 75px;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+#accept,#reject{
+    all: unset;
+    position: absolute;
+    background-color: red;
+    padding: 10px;
+    border-radius: 8px;
+    right: 20px;
+    color:white;
+    box-shadow: 3px 3px 10px gray;
+    cursor: pointer;
+}
+
+#accept{
+    right: 100px;    
+    background-color: green;
+}
+
+@media only screen and (max-width:800px){
+
+    
+
+}

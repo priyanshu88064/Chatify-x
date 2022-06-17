@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/dashboardR.css">
+        <script src="../javascript/dashboardR.js" defer></script>
+    <title>Chatify-Dashboard</title>
+</head>
+<body>
+    
+    <div class="panel">
+        <div class="name">Chatify</div>
+        <a href="/requests" ><div class="request"><img src="add-friend.png" alt="Friends"></div></a>
+        <a href="/"><div  class="myaccx"><img src="home.png" alt="home"></div></a>
+        <a href="/logout"><div class="logout"><img src="logout.png" alt="logout"></div></a>
+    </div>
+    
+    <div class="useless">
+        <div class="box" id="box">
+                
+            <div class="Chat">Chat</div><br><hr>
+            <div class="recentBox">
+                <div class="recent">Recent</div>
+                <div class="searchBar">
+                    <input type="text" id="search" style="display: none;">
+                    <img src="search.png" id="searchImg">
+                </div>
+            </div>
+            <div id="addfriend">Add Friends</div>
+            <a href="/chat/create-room"><div id="createroom">Create Room</div></a>
+            <div id="joinroom">Join Room</div>
+            <div id="hover">+</div>
+            <div class="inputFriendsName" id="inputFriendsName">
+                <form method="get" action="/chat/find">
+                    <input type="text" name="username" required placeholder="Enter Username"><br>
+                    <button type="submit">Send Request</button>
+                    <button type="button" id="cancel">Cancel</button>
+                </form>
+            </div>
+            
+            <div class="inputFriendsName" id="inputJoinRoom">
+                <form method="get" action="/chat/join">
+                    <input type="text" name="roomId" required placeholder="Enter Room Id"><br>
+                    <button type="submit">Join Room</button>
+                    <button type="button" id="cancelx">Cancel</button>
+                </form>
+            </div>
+            
+            <div class="chatbox" id="chatbox">
+                 <!-- <div class="user"><img src="1539986471.svg" alt="User Profile"><div class="username">Mia</div><div class="lastmsg">hii Mia</div><div class="time">6:26pm</div></div> -->
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
