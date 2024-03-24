@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var {userModel,messageModel,socketModel} = require('./schema');
 
-mongoose.connect('mongodb+srv://priyanshu88064:9758809708@cluster0.aqv81fc.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('your_mongodb_url');
 // mongoose.connect('mongodb://localhost:27017/chatify');
 
 async function authentication(req,res,next){
